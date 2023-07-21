@@ -68,6 +68,13 @@ h1{
 
     color:#60B886;
     text-shadow:0px 0px 5px #0000007e;
-
     }
 
+    p{
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        color: #ffffff;
+        text-align: center;
+        font-size: 25px;
+        margin-top: 10px;
+        padding: 0;
+    }

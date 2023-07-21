@@ -9,49 +9,86 @@
         body{
             font-family: Arial, Helvetica, sans-serif;
             font-size: 14px;
-            background-color: #0f1b140e;
-
-
+            background-color: #000000ec;
+            color: aliceblue;
+            width: 60%;
+            margin: auto;
+            padding: 0;
+       
         }
+        
+        fieldset{  
+            display: block; 
+            width: 50%;
+            border: none;    
+            margin: auto;   
+        }
+
         h1{
             text-align: center;
-            color: #60B886;
+            color: aliceblue;
             font-size: 40px;
-            font-style: italic;
+            font-style: normal;
             font-family: Georgia, 'Times New Roman', Times, serif;
             text-shadow:0px 1px 0px #0000007e;
-
+            margin-top: 90px;
+            margin-bottom: 30px;
         }
 
         h2{
            font-size: 18px; 
-           padding: 15px;
+           color: aliceblue;
+           text-align: center;
         }
 
     .retorno{
-        width: fit-content;
+        width:fit-content;
         display: inline-block;
         padding: 2px;
         background-color: #60B886;
         border-radius: 5px;
-        margin-right: auto;
+        margin-left: 300px;
+
         
-        color:#000000;
+        color:rgb(0, 0, 0);
         text-align: center;
         font-family: Arial, Helvetica, sans-serif;
         text-decoration: none;
+    }
 
+    div{
+        display: block; 
+            width: 50%;
+            margin-left: 750px; 
     }
 
     .botoes{
+        
         cursor: pointer;
+        border-radius: 5px;
+        border: 2px groove #00000044;
+        color: rgb(255, 255, 255);
+    }
+
+    .bt1{
+        background-color: #0011ffd7;
+    }
+
+    .bt2{
+        background-color: #ff0000c9;
     }
     
     legend{
         font-weight: bold;
-        font-style: italic;
         font-size: 15px;
-    }
+
+        background-color: #60B886;
+        border-radius: 5px;
+        color: #000000de;
+        
+        display: block; 
+        width: 100%;
+     }
     
 
     </style>
@@ -64,54 +101,53 @@
     <h2>Preencha o formulário abaixo</h2>
     
     <form>
-    <fieldset>
-        
-        <legend>Dados Pessoais</legend>
 
+        <!-- DADOS PESSOAIS -->
+    <fieldset>
+        <legend>Dados Pessoais</legend>
     <table cellspacing="10">
-<tr>
-<td>
-<label for="nome">Nome: </label>
-</td>
-<td align="left">
-<input type="text" name="nome" autofocus required>
-</td>
-<td>
-<label for="sobrenome">Sobrenome: </label>
-</td>
-<td align="left">
-<input type="text" name="sobrenome"required>
-</td>
-</tr>
-<tr>
-<td>
-<label>Nascimento: </label>
-</td>
-<td align="left">
-<input type="text" name="dia" size="2" maxlength="2" value="dd"required>
-<input type="text" name="mes" size="2" maxlength="2" value="mm"required>
-<input type="text" name="ano" size="4" maxlength="4" value="aaaa"required>
-</td>
-</tr>
-<tr>
-<td>
-<label for="rg">RG: </label>
-</td>
-<td align="left">
-<input type="text" name="rg" size="13" maxlength="13"required>
-</td>
-</tr>
-<tr>
-<td>
-<label>CPF:</label>
-</td>
-<td align="left">
-<input type="text" name="cpf" size="9" maxlength="9"required> - <input
-type="text" name="cpf2" size="2" maxlength="2"required>
-</td>
-</tr>
-</table>
-    </fieldset>
+    <tr>
+    <td>
+    <label for="nome">Nome: </label>
+    </td>
+    <td align="left">
+    <input type="text" name="nome" placeholder="Nome"autofocus required>
+    </td>
+    <td>
+    <label for="sobrenome">Sobrenome: </label>
+    </td>
+    <td align="left">
+    <input type="text" name="sobrenome" placeholder="Sobrenome" required >
+    </td>
+    </tr>
+    <tr>
+    <td>
+    <label>Nascimento: </label>
+    </td>
+    <td align="left">
+    <input type="text" name="dia" size="2" maxlength="2" value="dd" required>
+    <input type="text" name="mes" size="2" maxlength="2" value="mm" required>
+    <input type="text" name="ano" size="4" maxlength="4" value="aaaa" required>
+    </td>
+    </tr>
+    <tr>
+    <td>
+    <label for="rg">RG: </label>
+    </td>
+    <td align="left">
+    <input type="text" name="rg" size="13" maxlength="13" placeholder="00.000.000-00" required>
+    </td>
+    </tr>
+    <tr>
+    <td>
+    <label>CPF:</label>
+    </td>
+    <td align="left">
+    <input type="text" name="cpf" size="9" maxlength="9" placeholder="000000000" required> - <input type="text" name="cpf2" size="2" maxlength="2" placeholder="00" required>
+    </td>
+    </tr>
+    </table>
+        </fieldset>
 
     <br />
     <!-- ENDEREÇO -->
@@ -145,9 +181,9 @@ type="text" name="cpf2" size="2" maxlength="2"required>
     <label for="estado">Estado:</label>
     </td>
     <td align="left">
-    <!-- <select name="estado"> -->
-        <input type="text" list="estados">
-        <datalist id="estados" required>
+        <input type="text" list="estados" placeholder="Selecione seu estado">
+        <datalist id="estados"> 
+
     <option value="ac">Acre</option>
     <option value="al">Alagoas</option>
     <option value="am">Amazonas</option>
@@ -175,8 +211,7 @@ type="text" name="cpf2" size="2" maxlength="2"required>
     <option value="se">Sergipe</option>
     <option value="sp">São Paulo</option>
     <option value="to">Tocantins</option>
-</datalist>
-    <!-- </select> -->
+    </datalist>
     </td>
     </tr>
     <tr>
@@ -192,8 +227,8 @@ type="text" name="cpf2" size="2" maxlength="2"required>
     <label for="cep">CEP: </label>
     </td>
     <td align="left">
-    <input type="text" name="cep" size="5" maxlength="5" required> - <input
-    type="text" name="cep2" size="3" maxlength="3" required>
+    <input type="text" name="cep" size="5" maxlength="5" placeholder="00000" required> - <input
+    type="text" name="cep2" size="3" maxlength="3" placeholder="000" required>
     </td>
     </tr>
     </table>
@@ -201,7 +236,7 @@ type="text" name="cpf2" size="2" maxlength="2"required>
 
     <br>
     <!-- DADOS DE LOGIN -->
-<fieldset>
+    <fieldset>
     <legend>Dados de login</legend>
     <table cellspacing="10">
     <tr>
@@ -209,7 +244,7 @@ type="text" name="cpf2" size="2" maxlength="2"required>
     <label for="email">E-mail: </label>
     </td>
     <td align="left">
-    <input type="text" name="email" placeholder="exemplo@email.com" required>
+    <input type="email" name="email" placeholder="exemplo@email.com" required>
     </td>
     </tr>
     <tr>
@@ -225,7 +260,7 @@ type="text" name="cpf2" size="2" maxlength="2"required>
     <label for="pass">Senha: </label>
     </td>
     <td align="left">
-    <input type="password" name="pass" required>
+    <input type="password" name="pass" placeholder="Senha" required>
     </td>
     </tr>
     <tr>
@@ -241,11 +276,12 @@ type="text" name="cpf2" size="2" maxlength="2"required>
     
     <br />
     <div>
-        <input type="submit" class="botoes">
-        <input type="reset" value="Limpar" class="botoes">
+        <input type="submit" class="botoes bt1">
+        <input type="reset" value="Limpar" class="botoes bt2">
     </div>
 
 </form>
+
 <br>
 <a href="index.html" class="retorno">Voltar à Página Principal</a>
 
